@@ -1,8 +1,8 @@
 // JavaScript Document
 
-// Add a "checked" symbol when clicking on a list item
-var list = document.querySelector('ul');
-list.addEventListener('click', function (ev) {
+// Problème : Quand on actualise avec un item coché/barré, il redevient non coché/non barré
+var list1 = document.querySelector('ul');
+list1.addEventListener('click', function (ev) {
   if (ev.target.tagName === 'LI') {
     ev.target.classList.toggle('checked');
   }
