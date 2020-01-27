@@ -19,6 +19,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href="css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="css/style.css">
+<link rel="shortcut icon" href="images/AOP.png">
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -60,8 +61,16 @@
           <h2>A propos</h2>
         </div>
       </div>
+		
     </div>
+	  
   </div>
+	<div class="container">
+	<span style="margin: auto;" align="center">
+  <a class="increase">+</a> |
+  <a class="decrease">-</a> |
+  <a class="reset">reset</a>
+		</span></div>
   <div class="site-section py-5 custom-border-bottom" data-aos="fade">
     <div class="container">
       <div class="row mb-5">
@@ -96,12 +105,12 @@
           <p>L’AOP garantit au consommateur que toutes les étapes de production ont lieu dans l’aire géographique délimitée de l’appellation, de la production du lait jusqu’à l’affinage des fromages. En France, on compte 45 fromages, 3 beurres et 2 crèmes bénéficiant de cette appellation et près de 280 en Europe.<br>
             Les AOP laitières c’est 1 signe de qualité, 50 produits et 1 filière engagée dans :</p>
           <ul>
-            <li>La garantie d’origine,</li>
-            <li>L’économie des territoires,</li>
-            <li>La naturalité et la transparence,</li>
-            <li>La recherche, l’innovation et la formation,</li>
-            <li>La préservation des savoir-faire et de l’environnement,</li>
-            <li>La diversité des saveurs.</li>
+            <li class="resizable">La garantie d’origine,</li>
+            <li class="resizable">L’économie des territoires,</li>
+            <li class="resizable">La naturalité et la transparence,</li>
+            <li class="resizable">La recherche, l’innovation et la formation,</li>
+            <li class="resizable">La préservation des savoir-faire et de l’environnement,</li>
+            <li class="resizable">La diversité des saveurs.</li>
           </ul>
         </div>
       </div>
@@ -167,6 +176,38 @@
 <script src="js/jquery.fancybox.min.js"></script> 
 <script src="js/jquery.sticky.js"></script> 
 <script src="js/jquery.mb.YTPlayer.min.js"></script> 
-<script src="js/main.js"></script>
+<script src="js/main.js"></script> 
+<script>
+	$(document).ready(function() {
+  var resize = new Array('p', '.resizable');
+  resize = resize.join(',');
+
+  //resets the font size when "reset" is clicked
+  var resetFont = $(resize).css('font-size');
+  $(".reset").click(function() {
+    $(resize).css('font-size', resetFont);
+  });
+
+  //increases font size when "+" is clicked
+  $(".increase").click(function() {
+    var originalFontSize = $(resize).css('font-size');
+    var originalFontNumber = parseFloat(originalFontSize, 10);
+    var newFontSize = originalFontNumber * 1.2;
+    $(resize).css('font-size', newFontSize);
+    return false;
+  });
+
+  //decrease font size when "-" is clicked
+
+  $(".decrease").click(function() {
+    var originalFontSize = $(resize).css('font-size');
+    var originalFontNumber = parseFloat(originalFontSize, 10);
+    var newFontSize = originalFontNumber * 0.8;
+    $(resize).css('font-size', newFontSize);
+    return false;
+  });
+
+});
+	</script>
 </body>
 </html>
