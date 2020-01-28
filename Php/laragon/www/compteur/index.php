@@ -14,4 +14,4 @@
     }
     ?>
 
-<!doctype html>  
+<!doctype html>
