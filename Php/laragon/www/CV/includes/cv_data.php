@@ -120,11 +120,12 @@ for($i = 0; $i < 3; $i++) {
 }
 }
 
+
+$pageTitles = ['presentation' => 'présentation', 'exppro' => 'Expériences professionnelles', 'scolaire' => 'scolaire', 'loisirs' => 'loisirs'];
 ?>
 <style>
     body {
-        background-color : black;
-        color : white;
+        color : black;
         margin-left : 30px;
     }
     h1 {
@@ -134,4 +135,3 @@ for($i = 0; $i < 3; $i++) {
         text-decoration : underline;
     }
 </style>
-<title>CV</title>
