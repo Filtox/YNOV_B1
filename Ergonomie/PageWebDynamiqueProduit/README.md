@@ -17,7 +17,7 @@
 ### Perception :
 * [ ] Proposer des contenus textuels à tous les contenus non textuels ;
 * [ ] Proposer des sous titres pour vos contenus multimédia ;
-* [ ] Rendre vos contenus adaptatif (responsive design), proposer une version audio des contenus vidéos et modifier la taille de police ;
+* [X] Rendre vos contenus adaptatif (responsive design), proposer une version audio des contenus vidéos et modifier la taille de police ;
 * [X] Jouer les contrastes pour les daltoniens ;
 			
 ### Compréhension :
