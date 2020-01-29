@@ -15,8 +15,8 @@
 * [X] Aider l’utilisateur à naviguer, à se localiser (menu, fil d’ariane, barre de recherche) ;
 
 ### Perception :
-* [ ] Proposer des contenus textuels à tous les contenus non textuels ;
-* [ ] Proposer des sous titres pour vos contenus multimédia ;
+* [X] Proposer des contenus textuels à tous les contenus non textuels ;
+* [X] Proposer des sous titres pour vos contenus multimédia ;
 * [X] Rendre vos contenus adaptatif (responsive design), proposer une version audio des contenus vidéos et modifier la taille de police ;
 * [X] Jouer les contrastes pour les daltoniens ;
 			
