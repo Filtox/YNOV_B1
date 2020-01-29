@@ -10,24 +10,24 @@
 
 ### Utilisabilité :
 * [X] Raccourcis au clavier ;
-* Laisser le temps à l’internaute de lire ou utiliser le contenu qui lui est présenté ;
-* Ne pas provoquer de crises convulsives ;
-* Aider l’utilisateur à naviguer, à se localiser (menu, fil d’ariane, barre de recherche) ;
+* [X] Laisser le temps à l’internaute de lire ou utiliser le contenu qui lui est présenté ;
+* [X] Ne pas provoquer de crises convulsives ;
+* [X] Aider l’utilisateur à naviguer, à se localiser (menu, fil d’ariane, barre de recherche) ;
 
 ### Perception :
-* proposer des contenus textuels à tous les contenus non textuels ;
-* proposer des sous titres pour vos contenus multimédia ;
-* rendre vos contenus adaptatif (responsive design), proposer une version audio des contenus vidéos et modifier la taille de police ;
-* jouer les contrastes pour les daltoniens ;
+* Proposer des contenus textuels à tous les contenus non textuels ;
+* Proposer des sous titres pour vos contenus multimédia ;
+* Rendre vos contenus adaptatif (responsive design), proposer une version audio des contenus vidéos et modifier la taille de police ;
+* [X] Jouer les contrastes pour les daltoniens ;
 			
 ### Compréhension :
-* Rendre contenus lisibles et compréhensible ;
-* fonctionne de manière prévisible, vérifier que vos contenus apparaissent ;
-* aider l'internaute à éviter et corriger les erreurs ;
+* [X] Rendre contenus lisibles et compréhensible ;
+* [X] Fonctionne de manière prévisible, vérifier que vos contenus apparaissent ;
+* [X] Aider l'internaute à éviter et corriger les erreurs ;
 
 ### Compatibilité :
-* optimiser pour les technologies futures.
+* [X] Optimiser pour les technologies futures.
 
 #### W3C : Développe les standards pour le web afin que les gens puissent communiquer efficacement à travers Internet. Les membres délèguent des ingénieurs au sein de W3C et participent ainsi à l'élaboration des spéc techniques pour les technos du web.
 
-* 3 clics maximum pour accéder à une page web.
+* [X] 3 clics maximum pour accéder à une page web.
