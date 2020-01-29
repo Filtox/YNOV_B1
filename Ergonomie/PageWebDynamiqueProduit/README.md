@@ -9,7 +9,7 @@
 #### Recommandations :
 
 ### Utilisabilité :
-[X] Raccourcis au clavier ;
+* [X] Raccourcis au clavier ;
 * Laisser le temps à l’internaute de lire ou utiliser le contenu qui lui est présenté ;
 * Ne pas provoquer de crises convulsives ;
 * Aider l’utilisateur à naviguer, à se localiser (menu, fil d’ariane, barre de recherche) ;
