@@ -28,6 +28,6 @@
 ### Compatibilité :
 * optimiser pour les technologies futures.
 
-### W3C : Développe les standards pour le web afin que les gens puissent communiquer efficacement à travers Internet. Les membres délèguent des ingénieurs au sein de W3C et participent ainsi à l'élaboration des spéc techniques pour les technos du web.
+#### W3C : Développe les standards pour le web afin que les gens puissent communiquer efficacement à travers Internet. Les membres délèguent des ingénieurs au sein de W3C et participent ainsi à l'élaboration des spéc techniques pour les technos du web.
 
 * 3 clics maximum pour accéder à une page web.
