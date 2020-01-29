@@ -246,10 +246,11 @@ h1, h2, h3, h4, h5,
     .site-navbar .site-navigation .site-menu > li {
       display: inline-block; }
       .site-navbar .site-navigation .site-menu > li:first-child > a {
-        padding-left: 0; }
+        padding-left: 0;
+font-size: 1.5rem;}
       .site-navbar .site-navigation .site-menu > li > a {
         text-transform: uppercase;
-        font-size: .8rem;
+        font-size: 1.5rem;
         letter-spacing: .05rem;
         font-weight: 400;
         display: inline-block;

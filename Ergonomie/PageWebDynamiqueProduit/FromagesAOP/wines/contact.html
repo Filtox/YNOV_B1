@@ -61,6 +61,13 @@
       </div>
     </div>
   </div>
+    <div class="container">
+        <p style="color: black; font-weight: 500;"><strong>Taille de police :</strong></p>
+	<span style="margin: auto; cursor: pointer; color: black; font-size: 1.2rem; border: 1px solid grey; padding: 10px;" align="center">
+  <a class="increase" style="padding: 10px;">+</a> |
+  <a class="decrease" style="padding: 10px;">-</a> |
+  <a class="reset" style="padding: 10px;">Réinitialiser</a>
+		</span></div>
   <div class="site-section bg-light">
     <div class="container">
       <div class="row">
@@ -139,5 +146,37 @@
 <script src="js/jquery.sticky.js"></script> 
 <script src="js/jquery.mb.YTPlayer.min.js"></script> 
 <script src="js/main.js"></script>
+    <script>
+	$(document).ready(function() {
+  var resize = new Array('p', '.resizable');
+  resize = resize.join(',');
+
+  //resets the font size when "reset" is clicked
+  var resetFont = $(resize).css('font-size');
+  $(".reset").click(function() {
+    $(resize).css('font-size', resetFont);
+  });
+
+  //increases font size when "+" is clicked
+  $(".increase").click(function() {
+    var originalFontSize = $(resize).css('font-size');
+    var originalFontNumber = parseFloat(originalFontSize, 10);
+    var newFontSize = originalFontNumber * 1.2;
+    $(resize).css('font-size', newFontSize);
+    return false;
+  });
+
+  //decrease font size when "-" is clicked
+
+  $(".decrease").click(function() {
+    var originalFontSize = $(resize).css('font-size');
+    var originalFontNumber = parseFloat(originalFontSize, 10);
+    var newFontSize = originalFontNumber * 0.8;
+    $(resize).css('font-size', newFontSize);
+    return false;
+  });
+
+});
+	</script>
 </body>
 </html>
