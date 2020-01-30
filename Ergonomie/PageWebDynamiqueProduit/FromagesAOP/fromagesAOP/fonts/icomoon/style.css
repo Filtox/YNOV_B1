@@ -2,9 +2,9 @@
   font-family: 'icomoon';
   src:  url('fonts/icomoon.eot?10si43');
   src:  url('fonts/icomoon.eot?10si43#iefix') format('embedded-opentype'),
-url('fonts/icomoon.ttf?10si43') format('truetype'),
-url('fonts/icomoon.woff?10si43') format('woff'),
-url('fonts/icomoon.svg?10si43#icomoon') format('svg');
+    url('fonts/icomoon.ttf?10si43') format('truetype'),
+    url('fonts/icomoon.woff?10si43') format('woff'),
+    url('fonts/icomoon.svg?10si43#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -4917,49 +4917,16 @@ url('fonts/icomoon.svg?10si43#icomoon') format('svg');
 .icon-zoom_out_map:before {
   content: "\e56b";
 }
-/*the container must be positioned relative:*/
-.autocomplete {
-	position: relative;
-	display: inline-block;
+
+.breadcrumb1 ul {
+    display: flex;
 }
-input {
-	border: 1px solid transparent;
-	background-color: #f1f1f1;
-	padding: 10px;
-	font-size: 16px;
+    
+.breadcrumb1 li::before {
+    content: "→";
 }
-input[type=text] {
-	background-color: #f1f1f1;
-	width: 100%;
+    
+.breadcrumb1 li:first-child::before {
+    content: "";
 }
-input[type=submit] {
-	background-color: DodgerBlue;
-	color: #fff;
-	cursor: pointer;
-}
-.autocomplete-items {
-	position: absolute;
-	border: 1px solid #d4d4d4;
-	border-bottom: none;
-	border-top: none;
-	z-index: 99;
-	/*position the autocomplete items to be the same width as the container:*/
-	top: 100%;
-	left: 0;
-	right: 0;
-}
-.autocomplete-items div {
-	padding: 10px;
-	cursor: pointer;
-	background-color: #fff;
-	border-bottom: 1px solid #d4d4d4;
-}
-/*when hovering an item:*/
-.autocomplete-items div:hover {
-	background-color: #e9e9e9;
-}
-/*when navigating through the items using the arrow keys:*/
-.autocomplete-active {
-	background-color: DodgerBlue !important;
-	color: #ffffff;
-}
+    
