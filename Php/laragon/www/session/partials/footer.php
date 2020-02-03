@@ -1,4 +1,4 @@
-<footer> Footer </footer>
+<footer></footer>
 <?php
     $handle = fopen("counter.txt", "r");
     if(!$handle)
@@ -9,7 +9,7 @@
     {
         $counter=(int )fread($handle,20);fclose($handle);
         $counter++;
-        echo"Number of visitors to this page so far: ". $counter . "" ;
+        echo"<p>Nombres de visiteurs : </p>". $counter . "" ;
         $handle= fopen("counter.txt", "w" ) ;
         fwrite($handle,$counter) ;fclose ($handle) ;
     }

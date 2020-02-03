@@ -3,3 +3,20 @@ span.coords_label {
     color: red;
     /* display: block; */
 }
+
+span.marray_label {
+	color: #0613C1;
+	font-weight: bold;
+}
+
+ul {
+	padding: 25px
+}
+
+ul {
+	list-style-type: circle;
+}
+
+footer p {
+	font-family: nudista;
+}
