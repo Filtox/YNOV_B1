@@ -4917,15 +4917,3 @@
 .icon-zoom_out_map:before {
   content: "\e56b";
 }
-
-.breadcrumb1 ul {
-    display: flex;
-}
-    
-.breadcrumb1 li::before {
-    content: "→";
-}
-    
-.breadcrumb1 li:first-child::before {
-    content: "";
-}
