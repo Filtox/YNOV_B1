@@ -23,6 +23,7 @@ if ( isset( $_GET[ 'page' ] ) ) {
 </title>
 </head>
 <body>
+<?= recupereBaseDonnees1() ?>
 <?php require 'partials/navbar.php'; ?>
 <div class="container">
   <h1>
