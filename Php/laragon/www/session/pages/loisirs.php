@@ -7,12 +7,15 @@
 <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
-<ul>
+<?=	recupereBaseDonneesLoisirs() ?>
+<!--
+	<ul>
   <?php foreach($loisirs as $l): ?>
   <li> <span class="loisirs_label">
     <?= $l ?>
     </span> </li>
   <?php endforeach ?>
 </ul>
+-->
 </body>
 </html>

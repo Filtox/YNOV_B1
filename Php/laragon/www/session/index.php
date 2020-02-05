@@ -21,14 +21,21 @@ if ( isset( $_GET[ 'page' ] ) ) {
 <title>
 <?= getTitle($page) ?>
 </title>
+	<style>
+		td {
+			padding: 8px;
+			font-family: calibri;
+			text-align: center;
+		}
+	</style>
 </head>
 <body>
-<?= recupereBaseDonnees1() ?>
 <?php require 'partials/navbar.php'; ?>
 <div class="container">
-  <h1>
+	<h1>
     <?= getTitle($page) ?>
   </h1>
+	<?= recupereBaseDonneesPresentation() ?>
   <div class="container">
     <?= getBody($page) ?>
   </div>

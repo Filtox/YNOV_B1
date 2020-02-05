@@ -63,8 +63,9 @@ function recupereBaseDonnees() {
   $reponse->closeCursor();
 }
 */
-    
-function recupereBaseDonnees1() {
+
+// PRESENTATION
+function recupereBaseDonneesPresentation() {
   try {
     $bdd = new PDO( 'mysql:host=localhost;dbname=sitecvphp;charset=utf8', 'root', '' );
   } catch ( Exception $e ) {
@@ -72,22 +73,21 @@ function recupereBaseDonnees1() {
   }
 
   $reponse = $bdd->query( 'SELECT prenom, nom, age, adresse, ville, mail, telephone, permis FROM presentation' );
-  $reponse1 = $bdd->query( 'SELECT poste, entreprise FROM experiences' );
 
   echo '<table border="1">';
 
   echo '<th>';
-  echo '<td>' . 'prenom' . '</td>';
-  echo '<td>' . 'nom' . '</td>';
-  echo '<td>' . 'age' . '</td>';
-  echo '<td>' . 'adresse' . '</td>';
-  echo '<td>' . 'ville' . '</td>';
-  echo '<td>' . 'mail' . '</td>';
-  echo '<td>' . 'telephone' . '</td>';
-  echo '<td>' . 'permis' . '</td>';
+  echo '<td>' . 'Prénom' . '</td>';
+  echo '<td>' . 'Nom' . '</td>';
+  echo '<td>' . 'Age' . '</td>';
+  echo '<td>' . 'Adresse' . '</td>';
+  echo '<td>' . 'Ville' . '</td>';
+  echo '<td>' . 'E-mail' . '</td>';
+  echo '<td>' . 'Téléphone' . '</td>';
+  echo '<td>' . 'Permis' . '</td>';
   echo '</th>';
 
-  while ( $donnees = $reponse->fetch( PDO::FETCH_ASSOC ) ) {
+  while ( $donnees = $reponse->fetch( PDO::FETCH_ASSOC ) ) { //PDO::FETCH_ASSOC évite les doublons
     echo '<tr>';
     echo '<td></td>';
     foreach ( $donnees as $field ) {
@@ -97,17 +97,99 @@ function recupereBaseDonnees1() {
   }
   echo '</table>';
   $reponse->closeCursor();
-    
-    while ( $donnees = $reponse1->fetch( PDO::FETCH_ASSOC ) ) {
+}
+
+// EXPERIENCES
+function recupereBaseDonneesExperiences() {
+  try {
+    $bdd = new PDO( 'mysql:host=localhost;dbname=sitecvphp;charset=utf8', 'root', '' );
+  } catch ( Exception $e ) {
+    die( 'Erreur : ' . $e->getMessage() );
+  }
+
+  $reponse = $bdd->query( 'SELECT poste, entreprise, lieu, annee, mois, description FROM experiences' );
+
+  echo '<table border="1">';
+
+  echo '<th>';
+  echo '<td>' . 'Poste' . '</td>';
+  echo '<td>' . 'Entreprise' . '</td>';
+  echo '<td>' . 'Lieu' . '</td>';
+  echo '<td>' . 'Année' . '</td>';
+  echo '<td>' . 'Mois' . '</td>';
+  echo '<td>' . 'Descritpion' . '</td>';
+  echo '</th>';
+
+  while ( $donnees = $reponse->fetch( PDO::FETCH_ASSOC ) ) { //PDO::FETCH_ASSOC évite les doublons
     echo '<tr>';
     echo '<td></td>';
-    foreach ( $donnees as $field1 ) {
-      echo '<td>' . $field1 . '</td>';
+    foreach ( $donnees as $field ) {
+      echo '<td>' . $field . '</td>';
     }
     echo '</tr>';
   }
   echo '</table>';
-  $reponse1->closeCursor();
+  $reponse->closeCursor();
+}
+
+// FORMATION
+function recupereBaseDonneesFormation() {
+  try {
+    $bdd = new PDO( 'mysql:host=localhost;dbname=sitecvphp;charset=utf8', 'root', '' );
+  } catch ( Exception $e ) {
+    die( 'Erreur : ' . $e->getMessage() );
+  }
+
+  $reponse = $bdd->query( 'SELECT diplome, option, annee, etablissement, lieu FROM formation' );
+
+  echo '<table border="1">';
+
+  echo '<th>';
+  echo '<td>' . 'Diplome' . '</td>';
+  echo '<td>' . 'Option' . '</td>';
+  echo '<td>' . 'Annee' . '</td>';
+  echo '<td>' . 'Etablissement' . '</td>';
+  echo '<td>' . 'Lieu' . '</td>';
+  echo '</th>';
+
+  while ( $donnees = $reponse->fetch( PDO::FETCH_ASSOC ) ) { //PDO::FETCH_ASSOC évite les doublons
+    echo '<tr>';
+    echo '<td></td>';
+    foreach ( $donnees as $field ) {
+      echo '<td>' . $field . '</td>';
+    }
+    echo '</tr>';
+  }
+  echo '</table>';
+  $reponse->closeCursor();
+}
+
+// LOISIRS
+function recupereBaseDonneesLoisirs() {
+  try {
+    $bdd = new PDO( 'mysql:host=localhost;dbname=sitecvphp;charset=utf8', 'root', '' );
+  } catch ( Exception $e ) {
+    die( 'Erreur : ' . $e->getMessage() );
+  }
+
+  $reponse = $bdd->query( 'SELECT loisirs FROM loisirs' );
+
+  echo '<table border="1">';
+
+  echo '<th>';
+  echo '<td>' . 'Loisirs' . '</td>';
+  echo '</th>';
+
+  while ( $donnees = $reponse->fetch( PDO::FETCH_ASSOC ) ) { //PDO::FETCH_ASSOC évite les doublons
+    echo '<tr>';
+    echo '<td></td>';
+    foreach ( $donnees as $field ) {
+      echo '<td>' . $field . '</td>';
+    }
+    echo '</tr>';
+  }
+  echo '</table>';
+  $reponse->closeCursor();
 }
 
 ?>

@@ -6,7 +6,10 @@
 <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
+<?= recupereBaseDonneesExperiences() ?>
+<!--
 <?php include "includes/data.php" ?>
 <?= getMultipleArray($exp_pro, "exp") ?>
+-->
 </body>
 </html>

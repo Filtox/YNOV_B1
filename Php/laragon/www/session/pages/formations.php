@@ -6,7 +6,10 @@
 <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
+<?= recupereBaseDonneesFormation() ?>
+<!--
 <?php include "includes/data.php" ?>
 <?= getMultipleArray($formations, "formation") ?>
+-->
 </body>
 </html>
