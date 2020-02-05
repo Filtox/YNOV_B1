@@ -11,11 +11,61 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
--- Les données exportées n'étaient pas sélectionnées.
+
+-- Listage de la structure de la base pour sitecvphp
+CREATE DATABASE IF NOT EXISTS `sitecvphp` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `sitecvphp`;
+
+-- Listage de la structure de la table sitecvphp. experiences
+CREATE TABLE IF NOT EXISTS `experiences` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `poste` text,
+  `entreprise` text,
+  `lieu` text,
+  `annee` year(4) DEFAULT NULL,
+  `mois` text,
+  `description` text,
+  `occupe_actuellement` set('Oui','Non') DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 
 -- Les données exportées n'étaient pas sélectionnées.
 
+-- Listage de la structure de la table sitecvphp. formation
+CREATE TABLE IF NOT EXISTS `formation` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `diplome` text,
+  `option` text,
+  `annee` year(4) DEFAULT NULL,
+  `etablissement` text,
+  `lieu` text,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+
 -- Les données exportées n'étaient pas sélectionnées.
+
+-- Listage de la structure de la table sitecvphp. loisirs
+CREATE TABLE IF NOT EXISTS `loisirs` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `loisirs` text,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+-- Les données exportées n'étaient pas sélectionnées.
+
+-- Listage de la structure de la table sitecvphp. presentation
+CREATE TABLE IF NOT EXISTS `presentation` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `prenom` text,
+  `nom` text,
+  `age` tinyint(4) DEFAULT NULL,
+  `adresse` text,
+  `ville` text,
+  `mail` text,
+  `telephone` bigint(20) DEFAULT NULL,
+  `permis` set('B','A','A2') DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 -- Les données exportées n'étaient pas sélectionnées.
 
