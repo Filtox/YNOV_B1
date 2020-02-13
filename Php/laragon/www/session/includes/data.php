@@ -118,5 +118,7 @@ $pagesTitles = [
   'exp' => 'Mes Expériences',
   'formations' => 'Mes Formations',
   'loisirs' => 'Mes Loisirs',
+    'authentification' => 'Authentification',
+    'contact' => 'Contact',
 ];
 ?>
