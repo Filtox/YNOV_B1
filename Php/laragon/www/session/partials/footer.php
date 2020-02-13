@@ -1,5 +1,5 @@
 <footer>
-  <?= getAndIncrementCompteur() ?>
+<p>Compteur de visites :</p>  <?= getAndIncrementCompteur() ?>
 </footer>
 <!--
 <?php

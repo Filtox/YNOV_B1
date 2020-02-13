@@ -113,13 +113,11 @@ $formations = [
 
 $loisirs = [ 'Sport : Airsoft', 'Jeux Vidéo' ];
 */
-global $pagesTitles;
-$pagesTitles = [
-  'main' => 'Mon Cv',
-  'exp' => 'Mes Expériences',
-  'formations' => 'Mes Formations',
-  'loisirs' => 'Mes Loisirs',
-  'authentification' => 'Authentification',
-  'contact' => 'Contact',
+global $pagesTitlesAdmin;
+$pagesTitlesAdmin = [
+    'mainadmin' => 'Accueil Admin',
+  'expadmin' => 'Mes Expériences',
+  'formationsadmin' => 'Mes Formations',
+  'loisirsadmin' => 'Mes Loisirs',
 ];
 ?>
