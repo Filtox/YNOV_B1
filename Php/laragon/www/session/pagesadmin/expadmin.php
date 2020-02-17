@@ -11,5 +11,8 @@
 <?php include "includes/data.php" ?>
 <?= getMultipleArray($exp_pro, "exp") ?>
 -->
+<button type="button1"><a href="">Ajouter</a></button>
+<button type="button2">Modifier</button>
+<button type="button3">Supprimer</button>
 </body>
 </html>
