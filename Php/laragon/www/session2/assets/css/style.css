@@ -1,0 +1,22 @@
+span.coords_label {
+    font-weight: bold;
+    color: red;
+    /* display: block; */
+}
+
+span.marray_label {
+	color: #0613C1;
+	font-weight: bold;
+}
+
+ul {
+	padding: 20px
+}
+
+ul {
+	list-style-type: circle;
+}
+
+footer p {
+	font-family: nudista;
+}
