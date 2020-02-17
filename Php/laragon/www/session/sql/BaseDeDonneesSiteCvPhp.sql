@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS `experiences` (
 -- Listage des données de la table sitecvphp.experiences : ~10 rows (environ)
 /*!40000 ALTER TABLE `experiences` DISABLE KEYS */;
 INSERT INTO `experiences` (`id`, `poste`, `entreprise`, `lieu`, `annee`, `mois`, `description`, `occupe_actuellement`) VALUES
-	(1, 'Sapeur Pompier', 'BSPP', 'Paris', '2019', NULL, 'Arret pour causes de blessures', 'Non'),
+	(1cv, 'Sapeur Pompier', 'BSPP', 'Paris', '2019', NULL, 'Arret pour causes de blessures', 'Non'),
 	(2, 'Secrétaire Adjoint', 'FrenchCol', 'Rodez', '2019', NULL, 'Poste occupé actuellement', 'Oui'),
 	(3, 'Poseur', 'Belet Isolation', 'Rodez', '2018', 'Juillet', 'Job d\'été', 'Non'),
 	(4, 'Technicien d\'usinage', 'Mathou', 'Onet-le-Chateau', '2018', 'Juillet', 'Job d\'été', 'Non'),
@@ -96,6 +96,20 @@ CREATE TABLE IF NOT EXISTS `presentation` (
 INSERT INTO `presentation` (`id`, `prenom`, `nom`, `age`, `adresse`, `ville`, `mail`, `telephone`, `permis`) VALUES
 	(1, 'Pierre', 'Da Silva', 21, '1 place citoyenne sorgue', 'Agen d\'Aveyron', 'pierredasilva19@gmail.com', 33651997980, 'B');
 /*!40000 ALTER TABLE `presentation` ENABLE KEYS */;
+
+-- Listage de la structure de la table sitecvphp. users
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `login` text,
+  `password` text,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+-- Listage des données de la table sitecvphp.users : ~1 rows (environ)
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` (`id`, `login`, `password`) VALUES
+	(1, 'pierre', 'pi');
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;

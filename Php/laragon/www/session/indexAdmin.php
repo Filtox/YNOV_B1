@@ -1,7 +1,28 @@
-<?php
-require_once 'includes/functions.php';
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body style='background:#fff;'>
+        <div id="content">
+            <!-- tester si l'utilisateur est connecté -->
+            <?php
+                session_start();
+                if($_SESSION['username'] !== ""){
+                    $user = $_SESSION['username'];
+                    // afficher un message
+                    echo "Bonjour $user, vous êtes connecté";
+                }
+            ?>
+            
+        </div>
+    </body>
+</html>
 
-$page = 'main';
+
+<?php
+require_once 'includes/functionsAdmin.php';
+
+$page = '';
 if ( isset( $_GET[ 'page' ] ) ) {
   $page = $_GET[ 'page' ];
 }
@@ -10,14 +31,14 @@ if ( isset( $_GET[ 'page' ] ) ) {
 <!doctype html>
 <html lang="fr">
 <head>
-<link rel="shortcut icon" href="favicon.ico">
+<link rel="shortcut icon" href="includes/favicon.ico">
 <!-- Required meta tags -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="includes/assets/css/style.css">
 <title>
 <?= getTitle($page) ?>
 </title>
@@ -30,7 +51,7 @@ if ( isset( $_GET[ 'page' ] ) ) {
 	</style>
 </head>
 <body>
-<?php require 'partials/navbar.php'; ?>
+<?php require 'partials/navbarAdmin.php'; ?>
 <div class="container">
 	<h1>
     <?= getTitle($page) ?>
