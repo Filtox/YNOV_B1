@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS `experiences` (
 -- Listage des données de la table sitecvphp.experiences : ~10 rows (environ)
 /*!40000 ALTER TABLE `experiences` DISABLE KEYS */;
 INSERT INTO `experiences` (`id`, `poste`, `entreprise`, `lieu`, `annee`, `mois`, `description`, `occupe_actuellement`) VALUES
-	(1cv, 'Sapeur Pompier', 'BSPP', 'Paris', '2019', NULL, 'Arret pour causes de blessures', 'Non'),
+	(1, 'Sapeur Pompier', 'BSPP', 'Paris', '2019', NULL, 'Arret pour causes de blessures', 'Non'),
 	(2, 'Secrétaire Adjoint', 'FrenchCol', 'Rodez', '2019', NULL, 'Poste occupé actuellement', 'Oui'),
 	(3, 'Poseur', 'Belet Isolation', 'Rodez', '2018', 'Juillet', 'Job d\'été', 'Non'),
 	(4, 'Technicien d\'usinage', 'Mathou', 'Onet-le-Chateau', '2018', 'Juillet', 'Job d\'été', 'Non'),
@@ -49,7 +49,7 @@ CREATE TABLE IF NOT EXISTS `formation` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `diplome` text,
   `option` text,
-  `annee` year(4) DEFAULT NULL,
+  `annee` smallint(6) DEFAULT NULL,
   `etablissement` text,
   `lieu` text,
   PRIMARY KEY (`id`)
@@ -58,10 +58,10 @@ CREATE TABLE IF NOT EXISTS `formation` (
 -- Listage des données de la table sitecvphp.formation : ~4 rows (environ)
 /*!40000 ALTER TABLE `formation` DISABLE KEYS */;
 INSERT INTO `formation` (`id`, `diplome`, `option`, `annee`, `etablissement`, `lieu`) VALUES
-	(1, 'Licence Professionelle', 'GCPSH', '2019', 'Champollion', 'Rodez'),
-	(2, 'BTS', 'CPI', '2018', 'Alexis Monteil', 'Rodez'),
-	(3, 'BAC', 'STI2D', '2016', 'Alexis Monteil', 'Rodez'),
-	(4, 'Diplome Secourisme', 'PSE2', '2018', 'Protection civile', 'Rodez');
+	(1, 'Licence Professionelle', 'GCPSH', 2019, 'Champollion', 'Rodez'),
+	(2, 'BTS', 'CPI', 2018, 'Alexis Monteil', 'Rodez'),
+	(3, 'BAC', 'STI2D', 2016, 'Alexis Monteil', 'Rodez'),
+	(4, 'Diplome Secourisme', 'PSE2', 2018, 'Protection civile', 'Rodez');
 /*!40000 ALTER TABLE `formation` ENABLE KEYS */;
 
 -- Listage de la structure de la table sitecvphp. loisirs
@@ -100,15 +100,16 @@ INSERT INTO `presentation` (`id`, `prenom`, `nom`, `age`, `adresse`, `ville`, `m
 -- Listage de la structure de la table sitecvphp. users
 CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `login` text,
-  `password` text,
+  `username` text NOT NULL,
+  `password` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
--- Listage des données de la table sitecvphp.users : ~1 rows (environ)
+-- Listage des données de la table sitecvphp.users : ~2 rows (environ)
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` (`id`, `login`, `password`) VALUES
-	(1, 'pierre', 'pi');
+INSERT INTO `users` (`id`, `username`, `password`) VALUES
+	(1, 'pierre', 'pi'),
+	(2, 'p', 'p');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
