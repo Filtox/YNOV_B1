@@ -1,17 +1,12 @@
 <?php
 include( "db.php" );
 if ( isset( $_POST[ 'submitinserdetails' ] ) ) {
-  $prenom = $_POST[ 'prenom' ];
-  $nom = $_POST[ 'nom' ];
-  $age = $_POST[ 'age' ];
-  $adresse = $_POST[ 'adresse' ];
-  $ville = $_POST[ 'ville' ];
+  $firstname = $_POST[ 'firstname' ];
+  $lastname = $_POST[ 'lastname' ];
   $email = $_POST[ 'email' ];
-  $phone = $_POST[ 'phone' ];
-  $permis = $_POST[ 'permis' ];
-  if ( !empty( $prenom ) && !empty( $nom ) && !empty( $age ) && !empty( $adresse ) && !empty( $ville ) && !empty( $email ) && !empty( $phone ) && !empty( $permis ) ) {
-    $sql = "INSERT INTO `insertdeleteedittable`( `prenom`, `nom`, `age`, `adresse`, `ville`, `email`, `phone`, `permis`)
-                                     VALUES ('$prenom','$nom','$age','$adresse','$ville','$email','$phone','$permis')";
+  if ( !empty( $firstname ) && !empty( $lastname ) && !empty( $email ) ) {
+    $sql = "INSERT INTO `insertdeleteedittable`( `firstname`, `lastname`, `email`)
+                                     VALUES ('$firstname','$lastname','$email')";
     $qry = mysqli_query( $connect, $sql );
     if ( $qry ) {
       echo "inserted successfully";
@@ -21,7 +16,6 @@ if ( isset( $_POST[ 'submitinserdetails' ] ) ) {
   }
 }
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,28 +23,13 @@ if ( isset( $_POST[ 'submitinserdetails' ] ) ) {
 </head>
 <body>
 <form action="" method="POST">
-  <input type="text" name="prenom" placeholder="Prénom">
+  <input type="text" name="firstname">
   <br >
   <br >
-  <input type="text" name="nom" placeholder="Nom">
+  <input type="text" name="lastname">
   <br >
   <br >
-  <input type="text" name="age" placeholder="Age">
-  <br >
-  <br >
-	<input type="text" name="adresse" placeholder="Adresse">
-  <br >
-  <br >
-	<input type="text" name="ville" placeholder="Ville">
-  <br >
-  <br >
-	<input type="text" name="email" placeholder="E-mail">
-  <br >
-  <br >
-	<input type="text" name="phone" placeholder="Téléphone">
-  <br >
-  <br >
-	<input type="text" name="permis" placeholder="Permis">
+  <input type="text" name="email">
   <br >
   <br >
   <input type="submit" name="submitinserdetails" value="insert">

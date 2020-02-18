@@ -21,7 +21,6 @@ if ( isset( $_POST[ 'updateedit' ] ) ) {
 }
 //$seledit = "UPDATE `insertdeleteedittable` SET `id`=[value-1],`firstname`=[value-2],`lastname`=[value-3],`email`=[value-4] WHERE `id` = '$getid'";
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
