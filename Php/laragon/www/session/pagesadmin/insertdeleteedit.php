@@ -1,12 +1,17 @@
 <?php
 include( "db.php" );
 if ( isset( $_POST[ 'submitinserdetails' ] ) ) {
-  $firstname = $_POST[ 'firstname' ];
-  $lastname = $_POST[ 'lastname' ];
+  $prenom = $_POST[ 'prenom' ];
+  $nom = $_POST[ 'nom' ];
+  $age = $_POST[ 'age' ];
+  $adresse = $_POST[ 'adresse' ];
+  $ville = $_POST[ 'ville' ];
   $email = $_POST[ 'email' ];
-  if ( !empty( $firstname ) && !empty( $lastname ) && !empty( $email ) ) {
-    $sql = "INSERT INTO `insertdeleteedittable`( `firstname`, `lastname`, `email`)
-                                     VALUES ('$firstname','$lastname','$email')";
+  $phone = $_POST[ 'phone' ];
+  $permis = $_POST[ 'permis' ];
+  if ( !empty( $prenom ) && !empty( $nom ) && !empty( $age ) && !empty( $adresse ) && !empty( $ville ) && !empty( $email ) && !empty( $phone ) && !empty( $permis ) ) {
+    $sql = "INSERT INTO `insertdeleteedittable`( `prenom`, `nom`, `age`, `adresse`, `ville`, `email`, `phone`, `permis`)
+                                     VALUES ('$prenom','$nom','$age','$adresse','$ville','$email','$phone','$permis')";
     $qry = mysqli_query( $connect, $sql );
     if ( $qry ) {
       echo "inserted successfully";
@@ -24,10 +29,10 @@ if ( isset( $_POST[ 'submitinserdetails' ] ) ) {
 </head>
 <body>
 <form action="" method="POST">
-  <input type="text" name="firstname" placeholder="Prénom">
+  <input type="text" name="prenom" placeholder="Prénom">
   <br >
   <br >
-  <input type="text" name="lastname" placeholder="Nom">
+  <input type="text" name="nom" placeholder="Nom">
   <br >
   <br >
   <input type="text" name="age" placeholder="Age">
