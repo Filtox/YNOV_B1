@@ -1,3 +1,4 @@
+<!--
 <?php
 include( "db.php" );
 $getid = $_GET[ 'edit' ];
@@ -44,7 +45,7 @@ if ( isset( $_POST[ 'updateedit' ] ) ) {
   <input type="text" name="upfirstname" value="<?php echo $firstname; ?>">
   <br>
   <br>
-  <input type="text" name="uplastname" value="<?php echo $lastname ; ?>">
+  <input type="text" name="uplastname" value="<?php echo $lastname; ?>">
   <br>
   <br>
   <input type="text" name="upage" value="<?php echo $age; ?>">
@@ -67,5 +68,42 @@ if ( isset( $_POST[ 'updateedit' ] ) ) {
   <br>
   <input type="submit" name="updateedit" value="Update">
 </form>
+</body>
+</html>
+-->
+
+
+
+
+<?php
+// on se connecte à notre base
+$base = mysql_connect ('localhost', 'root', '');
+mysql_select_db ('sitecvphp', $base) ;
+?>
+<html>
+<head>
+<title>Modification de l'adresse d'un propriétaire</title>
+</head>
+<body>
+<?php
+// on teste si les variables du formulaire sont déclarées
+if (isset($_POST['nouvelle_adresse']) && isset($_POST['proprio'])) {
+
+	// lancement de la requête
+	$sql = 'UPDATE liste_proprietaire SET adresse="'.$_POST['nouvelle_adresse'].'" WHERE nom="'.$_POST['proprio'].'"';
+
+	// on exécute la requête (mysql_query) et on affiche un message au cas où la requête ne se passait pas bien (or die)
+	mysql_query($sql) or die('Erreur SQL !'.$sql.'<br />'.mysql_error());
+
+	// on ferme la connexion à la base
+	mysql_close();
+
+	// un petit message permettant de se rendre compte de la modification effectuée
+	echo 'La nouvelle adresse de '.$_POST['proprio'].' est : '.$_POST['nouvelle_adresse'];
+}
+else {
+	echo 'Les variables du formulaire ne sont pas déclarées';
+}
+?>
 </body>
 </html>
