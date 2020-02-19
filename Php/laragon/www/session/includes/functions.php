@@ -72,7 +72,7 @@ function recupereBaseDonneesPresentation() {
     die( 'Erreur : ' . $e->getMessage() );
   }
 
-  $reponse = $bdd->query( 'SELECT prenom, nom, age, adresse, ville, mail, telephone, permis FROM presentation' );
+  $reponse = $bdd->query( 'SELECT firstname, lastname, age, adresse, ville, mail, telephone, permis FROM presentation' );
 
   echo '<table border="1">';
 

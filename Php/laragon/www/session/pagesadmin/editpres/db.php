@@ -2,15 +2,15 @@
 $connect = mysqli_connect( "localhost", "root", "" );
 
 if ( $connect ) {
-  echo "<br/> Connected to server";
+  //echo "<br/> Connected to server";
 } else {
   die( "<br />Connection error " . mysqli_connect_error() );
 }
 
 $selectdb = mysqli_select_db( $connect, "sitecvphp" );
 if ( $selectdb ) {
-  echo "<br />Existing Database Selected";
-  echo "<br />Created database selected";
+  //echo "<br />Existing Database Selected";
+  //echo "<br />Created database selected";
   $sqlcreatetable = "
 CREATE TABLE IF NOT EXISTS `presentation` (
 `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -26,9 +26,9 @@ PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 ";
   if ( mysqli_query( $connect, $sqlcreatetable ) ) {
-    echo "<br />New table created";
+    //echo "<br />New table created";
   } else {
-    echo "<br />No table created";
+    //echo "<br />No table created";
   }
 
 } else {

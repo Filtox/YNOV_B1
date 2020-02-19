@@ -14,10 +14,10 @@ if ( isset( $_POST[ 'submitinserdetails' ] ) ) {
                                      VALUES ('$firstname','$lastname','$age','$adresse','$ville','$mail','$phone','$permis')";
     $qry = mysqli_query( $connect, $sql );
     if ( $qry ) {
-      echo "inserted successfully";
+      echo "<br>inserted successfully";
     }
   } else {
-    echo "all fields must be filled";
+    echo "<br>All fields must be filled";
   }
 }
 ?>
