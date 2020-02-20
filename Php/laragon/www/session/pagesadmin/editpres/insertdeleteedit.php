@@ -9,7 +9,7 @@ if ( isset( $_POST[ 'submitinserdetails' ] ) ) {
   $mail = $_POST[ 'mail' ];
   $phone = $_POST[ 'phone' ];
   $permis = $_POST[ 'permis' ];
-  if ( !empty( $firstname ) && !empty( $lastname ) && !empty( $age ) ) {
+  if ( !empty( $firstname ) && !empty( $lastname ) && !empty( $age ) && !empty( $adresse ) && !empty( $ville ) && !empty( $mail ) && !empty( $phone ) && !empty( $permis ) ) {
     $sql = "INSERT INTO `presentation`( `firstname`, `lastname`, `age`, `adresse`, `ville`, `mail`, `phone`, `permis`)
                                      VALUES ('$firstname','$lastname','$age','$adresse','$ville','$mail','$phone','$permis')";
     $qry = mysqli_query( $connect, $sql );

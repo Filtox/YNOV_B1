@@ -7,7 +7,15 @@
 <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
-<?=	recupereBaseDonneesLoisirs() ?>
+    <?php
+include( "editloisirs/display.php" );
+?>
+    <br>
+<button type="button1">
+<a href="../pagesadmin/editloisirs/insertdeleteedit.php">Ajouter</a>
+</button>
+    <!--
+<?=	recupereBaseDonneesLoisirs() ?> -->
 <!--
 	<ul>
   <?php foreach($loisirs as $l): ?>

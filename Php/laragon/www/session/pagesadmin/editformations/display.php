@@ -1,0 +1,43 @@
+<?php
+include( "db.php" );
+?>
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<style type="text/css">
+table {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+td {
+	border: 1px solid black;
+	padding: 10px;
+}
+</style>
+</head>
+<body>
+<table>
+  <tr>
+    <?php
+    $sel = "SELECT * FROM `formations` ";
+    $qrydisplay = mysqli_query( $connect, $sel );
+    while ( $row = mysqli_fetch_array( $qrydisplay ) ) {
+      $id = $row[ 'id' ];
+      $diplome = $row[ 'diplome' ];
+      $option = $row[ 'option' ];
+      $annee = $row[ 'annee' ];
+      $etablissement = $row[ 'etablissement' ];
+      $lieu = $row[ 'lieu' ];
+      echo "<tr><td>" . $id . "</td><td>" . $diplome . "</td><td>" . $option . "</td><td>" . $annee . "</td><td>" . $etablissement . "</td><td>" . $lieu . "</td><td><a href='../pagesadmin/editformations/edit.php?edit=$id' >Modifier</a></td><td><a href='../pagesadmin/editformations/delete.php?deleteid=$id' >Supprimer</a></td></tr>";
+    }
+    ?>
+  </tr>
+</table>
+<br>
+<button>
+<a href="../../indexAdmin.php?page=formationsadmin">Rafraichir</a>
+</button>
+<br>
+</body>
+</html>

@@ -48,19 +48,19 @@ if ( isset( $_POST[ 'updateedit' ] ) ) {
   <br>
   <br>
   <input type="text" name="upage" value="<?php echo $age; ?>">
-	<br>
+  <br>
   <br>
   <input type="text" name="upadresse" value="<?php echo $adresse; ?>">
-	<br>
+  <br>
   <br>
   <input type="text" name="upville" value="<?php echo $ville; ?>">
-	<br>
+  <br>
   <br>
   <input type="text" name="upmail" value="<?php echo $mail; ?>">
-	<br>
+  <br>
   <br>
   <input type="text" name="upphone" value="<?php echo $phone; ?>">
-	<br>
+  <br>
   <br>
   <input type="text" name="uppermis" value="<?php echo $permis; ?>">
   <br>

@@ -13,11 +13,5 @@ include( "editpres/display.php" );
 <button type="button1">
 <a href="../pagesadmin/editpres/insertdeleteedit.php">Ajouter</a>
 </button>
-<button type="button2">
-<a href="../pagesadmin/editpres/display.php">Modifier</a>
-</button>
-<button type="button3">
-<a href="../pagesadmin/editpres/delete.php">Supprimer</a>
-</button>
 </body>
 </html>
