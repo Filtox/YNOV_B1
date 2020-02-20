@@ -32,7 +32,7 @@ td {
       $mail = $row[ 'mail' ];
       $phone = $row[ 'phone' ];
       $permis = $row[ 'permis' ];
-      echo "<tr><td>" . $id . "</td><td>" . $firstname . "</td><td>" . $lastname . "</td><td>" . $age . "</td><td>" . $adresse . "</td><td>" . $ville . "</td><td>" . $mail . "</td><td>" . $phone . "</td><td>" . $permis . "</td><td><a href='edit.php?edit=$id' >Edit</a></td><td><a href='delete.php?deleteid=$id' >Delete</a></td></tr>";
+      echo "<tr><td>" . $id . "</td><td>" . $firstname . "</td><td>" . $lastname . "</td><td>" . $age . "</td><td>" . $adresse . "</td><td>" . $ville . "</td><td>" . $mail . "</td><td>" . $phone . "</td><td>" . $permis . "</td><td><a href='../pagesadmin/editpres/edit.php?edit=$id' >Edit</a></td><td><a href='../pagesadmin/editpres/delete.php?deleteid=$id' >Delete</a></td></tr>";
     }
     ?>
   </tr>
