@@ -5,6 +5,7 @@ include( "db.php" );
 <html>
 <head>
 <title></title>
+     <link rel="stylesheet" href="../../assets/css/style.css">
 <style type="text/css">
 table {
 	border: 1px solid black;
@@ -29,15 +30,13 @@ td {
       $annee = $row[ 'annee' ];
       $etablissement = $row[ 'etablissement' ];
       $lieu = $row[ 'lieu' ];
-      echo "<tr><td>" . $id . "</td><td>" . $diplome . "</td><td>" . $option . "</td><td>" . $annee . "</td><td>" . $etablissement . "</td><td>" . $lieu . "</td><td><a href='../pagesadmin/editformations/edit.php?edit=$id' >Modifier</a></td><td><a href='../pagesadmin/editformations/delete.php?deleteid=$id' >Supprimer</a></td></tr>";
+      echo "<tr><td style='color : red; background: lightblue;'>" . $id . "</td><td>" . $diplome . "</td><td>" . $option . "</td><td>" . $annee . "</td><td>" . $etablissement . "</td><td>" . $lieu . "</td><td><a href='../pagesadmin/editformations/edit.php?edit=$id' >Modifier</a></td><td><a style='color: red'  href='../pagesadmin/editformations/delete.php?deleteid=$id' >Supprimer</a></td></tr>";
     }
     ?>
   </tr>
 </table>
 <br>
-<button>
-<a href="../../indexAdmin.php?page=formationsadmin">Rafraichir</a>
-</button>
+<a class="myButton"  href="../../indexAdmin.php?page=formationsadmin">Rafraichir</a>
 <br>
 </body>
 </html>

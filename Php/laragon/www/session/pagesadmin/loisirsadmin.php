@@ -11,9 +11,7 @@
 include( "editloisirs/display.php" );
 ?>
     <br>
-<button type="button1">
-<a href="../pagesadmin/editloisirs/insertdeleteedit.php">Ajouter</a>
-</button>
+<a class="myButton" href="../pagesadmin/editloisirs/insertdeleteedit.php">Ajouter</a>
     <!--
 <?=	recupereBaseDonneesLoisirs() ?> -->
 <!--

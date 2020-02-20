@@ -10,9 +10,7 @@
 include( "editformations/display.php" );
 ?>
     <br>
-<button type="button1">
-<a href="../pagesadmin/editformations/insertdeleteedit.php">Ajouter</a>
-</button>
+<a class="myButton" href="../pagesadmin/editformations/insertdeleteedit.php">Ajouter</a>
 <!-- <?= recupereBaseDonneesFormation() ?> -->
 <!--
 <?php include "includes/data.php" ?>

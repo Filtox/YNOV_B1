@@ -14,8 +14,7 @@ include( "editexp/display.php" );
 <?php include "includes/data.php" ?>
 <?= getMultipleArray($exp_pro, "exp") ?>
 -->
-    <button type="button1">
-<a href="../pagesadmin/editexp/insertdeleteedit.php">Ajouter</a>
-</button>
+    <br>
+<a class="myButton" href="../pagesadmin/editexp/insertdeleteedit.php">Ajouter</a>
 </body>
 </html>

@@ -17,16 +17,17 @@ if ( isset( $_POST[ 'submitinserdetails' ] ) ) {
 <!DOCTYPE html>
 <html>
 <head>
-<title>Edition </title>
+<title>Insertion d'un loisir</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
 <body>
 <form action="" method="POST">
   <input type="text" name="loisirs" placeholder="Loisirs">
   <br >
   <br >
-  <input type="submit" name="submitinserdetails" value="insert">
+  <input type="submit" name="submitinserdetails" value="Insérer">
 </form>
     <br>
-    <button><a href="../../indexAdmin.php?page=loisirsadmin">Revenir à la page</a></button>
+<a class="myButton" href="../../indexAdmin.php?page=loisirsadmin">Revenir à la page</a>
 </body>
 </html>

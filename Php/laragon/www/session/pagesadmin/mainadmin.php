@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
 <body>
@@ -10,8 +11,7 @@ include( "editpres/display.php" );
 ?>
 <!-- <?= recupereBaseDonneesPresentation() ?>  -->
 <br>
-<button type="button1">
-<a href="../pagesadmin/editpres/insertdeleteedit.php">Ajouter</a>
-</button>
+<a class="myButton" href="../pagesadmin/editpres/insertdeleteedit.php">Ajouter</a>
+    <a class="myButtondeco" href="../index.php">Se déconnecter</a>
 </body>
 </html>

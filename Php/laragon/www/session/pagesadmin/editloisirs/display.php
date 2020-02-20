@@ -5,6 +5,7 @@ include( "db.php" );
 <html>
 <head>
 <title></title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
 <style type="text/css">
 table {
 	border: 1px solid black;
@@ -25,15 +26,13 @@ td {
     while ( $row = mysqli_fetch_array( $qrydisplay ) ) {
       $id = $row[ 'id' ];
       $loisirs = $row[ 'loisirs' ];
-      echo "<tr><td>" . $id . "</td><td>" . $loisirs . "</td><td><a href='../pagesadmin/editloisirs/edit.php?edit=$id' >Modifier</a></td><td><a href='../pagesadmin/editloisirs/delete.php?deleteid=$id' >Supprimer</a></td></tr>";
+      echo "<tr><td style='color : red; background: lightblue;'>" . $id . "</td><td>" . $loisirs . "</td><td><a href='../pagesadmin/editloisirs/edit.php?edit=$id' >Modifier</a></td><td><a style='color: red'  href='../pagesadmin/editloisirs/delete.php?deleteid=$id' >Supprimer</a></td></tr>";
     }
     ?>
   </tr>
 </table>
 <br>
-<button>
-<a href="../../indexAdmin.php?page=loisirsadmin">Rafraichir</a>
-</button>
+<a class="myButton" href="../../indexAdmin.php?page=loisirsadmin">Rafraichir</a>
 <br>
 </body>
 </html>

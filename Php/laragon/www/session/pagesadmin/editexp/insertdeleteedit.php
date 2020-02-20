@@ -23,6 +23,7 @@ if ( isset( $_POST[ 'submitinserdetails' ] ) ) {
 <html>
 <head>
 <title></title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
 <body>
 <form action="" method="POST">
@@ -44,7 +45,9 @@ if ( isset( $_POST[ 'submitinserdetails' ] ) ) {
   <input type="text" name="description" placeholder="Description">
   <br >
   <br >
-  <input type="submit" name="submitinserdetails" value="insert">
+  <input type="submit" name="submitinserdetails" value="Insérer">
 </form>
+    <br>
+    <a class="myButton" href="../../indexAdmin.php?page=expadmin">Revenir à la page</a>
 </body>
 </html>
