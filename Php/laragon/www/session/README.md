@@ -2,5 +2,5 @@
 
 ### Authentification
 
-Login : p
-Mot de passe : p
+**Login :** p
+**Mot de passe :** p
