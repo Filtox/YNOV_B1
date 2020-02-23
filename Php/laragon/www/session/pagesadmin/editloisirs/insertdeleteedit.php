@@ -17,11 +17,12 @@ if ( isset( $_POST[ 'submitinserdetails' ] ) ) {
 <!DOCTYPE html>
 <html>
 <head>
-<title>Insertion d'un loisir</title>
+<title>Ajouter données</title>
     <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
 <body>
 <form action="" method="POST">
+    <p>Loisirs</p>
   <input type="text" name="loisirs" placeholder="Loisirs">
   <br >
   <br >

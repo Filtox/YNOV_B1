@@ -24,46 +24,46 @@ if ( isset( $_POST[ 'submitinserdetails' ] ) ) {
 <!DOCTYPE html>
 <html>
 <head>
-<title></title>
-    <link rel="stylesheet" href="../../assets/css/style.css">
+<title>Ajouter données</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
 </head>
 <body>
 <form action="" method="POST">
-    <p>Prénom</p>
+  <p>Prénom</p>
   <input type="text" name="firstname" placeholder="Prénom">
   <br >
   <br >
-    <p>Nom</p>
+  <p>Nom</p>
   <input type="text" name="lastname" placeholder="Nom">
   <br >
   <br >
-    <p>Age</p>
+  <p>Age</p>
   <input type="text" name="age" placeholder="Age">
-	<br >
   <br >
-    <p>Adresse</p>
+  <br >
+  <p>Adresse</p>
   <input type="text" name="adresse" placeholder="Adresse">
-	<br >
   <br >
-    <p>Ville</p>
+  <br >
+  <p>Ville</p>
   <input type="text" name="ville" placeholder="Ville">
-	<br >
   <br >
-    <p>Mail</p>
+  <br >
+  <p>Mail</p>
   <input type="text" name="mail" placeholder="Mail">
-	<br >
   <br >
-    <p>Téléphone</p>
+  <br >
+  <p>Téléphone</p>
   <input type="text" name="phone" placeholder="Téléphone">
-	<br >
   <br >
-    <p>Permis</p>
+  <br >
+  <p>Permis</p>
   <input type="text" name="permis" placeholder="Permis">
   <br >
   <br >
   <input type="submit" name="submitinserdetails" value="Insérer">
 </form>
-    <br>
-    <a class="myButton" href="../../indexAdmin.php?page=mainadmin">Revenir à la page</a>
+<br>
+<a class="myButton" href="../../indexAdmin.php?page=mainadmin">Revenir à la page</a>
 </body>
 </html>

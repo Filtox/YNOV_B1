@@ -24,13 +24,11 @@ if ( isset( $_POST[ 'updateedit' ] ) ) {
 </head>
 <body>
 <form method="POST" action="">
-  <input type="text" name="upid" value="<?php echo $id; ?>">
-  <br>
-  <br>
+  <p>Loisirs</p>
   <input type="text" name="uploisirs" value="<?php echo $loisirs; ?>">
   <br>
   <br>
-<input type="submit" name="updateedit" value="Update">
+  <input type="submit" name="updateedit" value="Modifier">
 </form>
 </body>
 </html>

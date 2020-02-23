@@ -4,7 +4,7 @@ include( "db.php" );
 <!DOCTYPE html>
 <html>
 <head>
-<title></title>
+<title>Ecran de modification</title>
     <link rel="stylesheet" href="../../assets/css/style.css">
 <style type="text/css">
 table {

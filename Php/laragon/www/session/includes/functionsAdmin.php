@@ -63,7 +63,6 @@ function recupereBaseDonneesPres() {
   $reponse->closeCursor();
 }
 */
-
 // PRESENTATION
 function recupereBaseDonneesPresentation() {
   try {

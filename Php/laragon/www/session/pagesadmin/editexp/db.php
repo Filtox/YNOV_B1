@@ -59,5 +59,4 @@ PRIMARY KEY (`id`)
     echo "<br />No database created";
   }
 }
-
 ?>

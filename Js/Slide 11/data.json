@@ -1,0 +1,10 @@
+{
+  "text": "toto",
+  "number": 1,
+  "boolean": true,
+  "null": null,
+  "array": [
+    1,
+    "toto"
+  ]
+}

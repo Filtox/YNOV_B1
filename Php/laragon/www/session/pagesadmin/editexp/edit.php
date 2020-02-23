@@ -34,28 +34,31 @@ if ( isset( $_POST[ 'updateedit' ] ) ) {
 </head>
 <body>
 <form method="POST" action="">
-  <input type="text" name="upid" value="<?php echo $id; ?>">
-  <br>
-  <br>
+  <p>Intitulé du poste</p>
   <input type="text" name="upposte" value="<?php echo $poste; ?>">
   <br>
   <br>
+  <p>Entreprise</p>
   <input type="text" name="upentreprise" value="<?php echo $entreprise; ?>">
   <br>
   <br>
+  <p>Lieu</p>
   <input type="text" name="uplieu" value="<?php echo $lieu; ?>">
-	<br>
   <br>
+  <br>
+  <p>Année</p>
   <input type="text" name="upannee" value="<?php echo $annee; ?>">
-	<br>
   <br>
+  <br>
+  <p>Mois</p>
   <input type="text" name="upmois" value="<?php echo $mois; ?>">
-	<br>
   <br>
+  <br>
+  <p>Description</p>
   <input type="text" name="description" value="<?php echo $description; ?>">
-	<br>
   <br>
-<input type="submit" name="updateedit" value="Update">
+  <br>
+  <input type="submit" name="updateedit" value="Modifier">
 </form>
 </body>
 </html>

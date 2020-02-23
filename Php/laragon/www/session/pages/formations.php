@@ -7,13 +7,18 @@ include( "pagesadmin/editformations/db.php" );
 <link rel="shortcut icon" href="favicon.ico">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link rel="stylesheet" href="../assets/css/style.css">
+    <style type="text/css">
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+td {
+    border: 1px solid black;
+    padding: 10px;
+}
+</style>
 </head>
 <body>
-<!-- <?= recupereBaseDonneesFormation() ?> --> 
-<!--
-<?php include "includes/data.php" ?>
-<?= getMultipleArray($formations, "formation") ?>
--->
 <table>
   <tr>
     <?php
@@ -31,5 +36,11 @@ include( "pagesadmin/editformations/db.php" );
     ?>
   </tr>
 </table>
-</body>
+    <br><br><img style="width: 30%; height: auto;" alt="profil" src="../images/actual/formation.jpg"><br><br>
+<!-- <?= recupereBaseDonneesFormation() ?> --> 
+<!--
+<?php include "includes/data.php" ?>
+<?= getMultipleArray($formations, "formation") ?>
+-->
+    </body>
 </html>

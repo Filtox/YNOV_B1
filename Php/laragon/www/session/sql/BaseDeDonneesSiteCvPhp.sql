@@ -19,82 +19,83 @@ USE `sitecvphp`;
 -- Listage de la structure de la table sitecvphp. experiences
 CREATE TABLE IF NOT EXISTS `experiences` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `poste` text,
-  `entreprise` text,
-  `lieu` text,
-  `annee` year(4) DEFAULT NULL,
-  `mois` text,
-  `description` text,
-  `occupe_actuellement` set('Oui','Non') DEFAULT NULL,
+  `poste` varchar(100) NOT NULL,
+  `entreprise` varchar(100) NOT NULL,
+  `lieu` varchar(100) NOT NULL,
+  `annee` varchar(100) NOT NULL,
+  `mois` varchar(100) NOT NULL,
+  `description` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
 
--- Listage des données de la table sitecvphp.experiences : ~10 rows (environ)
+-- Listage des données de la table sitecvphp.experiences : ~11 rows (environ)
 /*!40000 ALTER TABLE `experiences` DISABLE KEYS */;
-INSERT INTO `experiences` (`id`, `poste`, `entreprise`, `lieu`, `annee`, `mois`, `description`, `occupe_actuellement`) VALUES
-	(1, 'Sapeur Pompier', 'BSPP', 'Paris', '2019', NULL, 'Arret pour causes de blessures', 'Non'),
-	(2, 'Secrétaire Adjoint', 'FrenchCol', 'Rodez', '2019', NULL, 'Poste occupé actuellement', 'Oui'),
-	(3, 'Poseur', 'Belet Isolation', 'Rodez', '2018', 'Juillet', 'Job d\'été', 'Non'),
-	(4, 'Technicien d\'usinage', 'Mathou', 'Onet-le-Chateau', '2018', 'Juillet', 'Job d\'été', 'Non'),
-	(5, 'Equipier secouriste', 'Protection Civile', 'Aveyron', '2018', 'Février', 'Poste occupé actuellement', 'Oui'),
-	(6, 'Vendeur', 'Brico Dépot', 'Onet-le-Chateau', '2017', 'Juillet - Aout', 'Job d\'été', 'Non'),
-	(7, 'Projeteur - Dessinateur 3D', 'Bosch', 'Rodez', '2017', 'Mai - Juin', 'Stage de BTS', 'Non'),
-	(8, 'Mise en rayon', 'Leclerc', 'Onet-le-Chateau', '2016', 'Aout', 'Job d\'été', 'Non'),
-	(9, 'Montage de mobilier', 'LDS Crèche', 'Sainte-Radegonde', '2015', 'Aout', 'Job d\'été', 'Non'),
-	(10, 'Maraicher', 'Gaec la ferme d\'Agen', 'Agen d\'Aveyron', '2014', 'Aout', 'Job d\'été', 'Non');
+INSERT INTO `experiences` (`id`, `poste`, `entreprise`, `lieu`, `annee`, `mois`, `description`) VALUES
+	(2, 'Sapeur pompier de Paris', 'BSPP', 'Paris', '2019', '-', 'Meilleur mÃ©tier du monde'),
+	(3, 'TrÃ©sorier Adjoint', 'French Col', 'Occitanie', '2019', '-', 'Association Ã©vÃ©nementiel'),
+	(4, 'Agent de fabrication', 'Mathou CrÃ©ations', 'Rodez', '2018', 'Juillet', 'Job Ã©tÃ©'),
+	(5, 'Pose isolation', 'Belet Isolations', 'OIemps', '2018', 'Juillet', ''),
+	(8, 'Secouriste', 'Protection civile', 'Aveyron', '2018', 'FÃ©vrier', 'Secouriste de niveau PSE2'),
+	(9, 'Dessinateur 3D', 'Bosch', 'Rodez', '2017', 'Mai - Juin', 'Stage de BTS'),
+	(10, 'Vendeur et mise en rayon', 'Brico DÃ©pot', 'Onet-le-chateau', '2017', 'Juillet - Aout', 'Job Ã©tÃ©'),
+	(11, 'Mise en rayon', 'Leclerc', 'Onet-le-chateau', '2016', 'Aout', 'Job Ã©tÃ©'),
+	(12, 'Montage de mobilier', 'LDS crÃ¨che', 'Sainte Radegonde', '2015', 'Aout', 'Job Ã©tÃ©'),
+	(13, 'Maraicher', 'Ferme Agen', 'Agen Aveyron', '2014', 'Juillet - Aout', 'Job Ã©tÃ©'),
+	(14, 'Garagiste', 'Poujouly', 'SÃ©vÃ©rac-le-Chateau', '2013', 'FÃ©vrier', 'Stage de troisiÃ¨me');
 /*!40000 ALTER TABLE `experiences` ENABLE KEYS */;
 
--- Listage de la structure de la table sitecvphp. formation
-CREATE TABLE IF NOT EXISTS `formation` (
+-- Listage de la structure de la table sitecvphp. formations
+CREATE TABLE IF NOT EXISTS `formations` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `diplome` text,
-  `option` text,
-  `annee` smallint(6) DEFAULT NULL,
-  `etablissement` text,
-  `lieu` text,
+  `diplome` varchar(100) NOT NULL,
+  `option` varchar(100) NOT NULL,
+  `annee` varchar(100) NOT NULL,
+  `etablissement` varchar(100) NOT NULL,
+  `lieu` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
--- Listage des données de la table sitecvphp.formation : ~4 rows (environ)
-/*!40000 ALTER TABLE `formation` DISABLE KEYS */;
-INSERT INTO `formation` (`id`, `diplome`, `option`, `annee`, `etablissement`, `lieu`) VALUES
-	(1, 'Licence Professionelle', 'GCPSH', 2019, 'Champollion', 'Rodez'),
-	(2, 'BTS', 'CPI', 2018, 'Alexis Monteil', 'Rodez'),
-	(3, 'BAC', 'STI2D', 2016, 'Alexis Monteil', 'Rodez'),
-	(4, 'Diplome Secourisme', 'PSE2', 2018, 'Protection civile', 'Rodez');
-/*!40000 ALTER TABLE `formation` ENABLE KEYS */;
+-- Listage des données de la table sitecvphp.formations : ~2 rows (environ)
+/*!40000 ALTER TABLE `formations` DISABLE KEYS */;
+INSERT INTO `formations` (`id`, `diplome`, `option`, `annee`, `etablissement`, `lieu`) VALUES
+	(4, 'BTS', 'CPI', '2018', 'Alexis Monteil', ''),
+	(6, 'Niveau Licence Pro', 'SBP - GCPSH', '2019', 'Champollion', 'Rodez'),
+	(7, 'BAC', 'STI2D - SIN', '2016', 'Monteil', 'Rodez');
+/*!40000 ALTER TABLE `formations` ENABLE KEYS */;
 
 -- Listage de la structure de la table sitecvphp. loisirs
 CREATE TABLE IF NOT EXISTS `loisirs` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `loisirs` text,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
--- Listage des données de la table sitecvphp.loisirs : ~1 rows (environ)
+-- Listage des données de la table sitecvphp.loisirs : ~3 rows (environ)
 /*!40000 ALTER TABLE `loisirs` DISABLE KEYS */;
 INSERT INTO `loisirs` (`id`, `loisirs`) VALUES
-	(1, 'Airsoft');
+	(1, 'Airsoft'),
+	(2, 'Football'),
+	(3, 'Airsoft');
 /*!40000 ALTER TABLE `loisirs` ENABLE KEYS */;
 
 -- Listage de la structure de la table sitecvphp. presentation
 CREATE TABLE IF NOT EXISTS `presentation` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `prenom` text,
-  `nom` text,
-  `age` tinyint(4) DEFAULT NULL,
-  `adresse` text,
-  `ville` text,
-  `mail` text,
-  `telephone` bigint(20) DEFAULT NULL,
-  `permis` set('B','A','A2') DEFAULT NULL,
+  `firstname` varchar(100) NOT NULL,
+  `lastname` varchar(100) NOT NULL,
+  `age` varchar(100) NOT NULL,
+  `adresse` varchar(100) NOT NULL,
+  `ville` varchar(100) NOT NULL,
+  `mail` varchar(100) NOT NULL,
+  `phone` varchar(100) NOT NULL,
+  `permis` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 -- Listage des données de la table sitecvphp.presentation : ~1 rows (environ)
 /*!40000 ALTER TABLE `presentation` DISABLE KEYS */;
-INSERT INTO `presentation` (`id`, `prenom`, `nom`, `age`, `adresse`, `ville`, `mail`, `telephone`, `permis`) VALUES
-	(1, 'Pierre', 'Da Silva', 21, '1 place citoyenne sorgue', 'Agen d\'Aveyron', 'pierredasilva19@gmail.com', 33651997980, 'B');
+INSERT INTO `presentation` (`id`, `firstname`, `lastname`, `age`, `adresse`, `ville`, `mail`, `phone`, `permis`) VALUES
+	(6, 'Pierre', 'Da Silva', '21', '1 place citoyenne sorgue', 'Agen Aveyron', 'pierredasilva19@gmail.com', '0651997980', 'B');
 /*!40000 ALTER TABLE `presentation` ENABLE KEYS */;
 
 -- Listage de la structure de la table sitecvphp. users
@@ -105,7 +106,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
--- Listage des données de la table sitecvphp.users : ~2 rows (environ)
+-- Listage des données de la table sitecvphp.users : ~0 rows (environ)
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 INSERT INTO `users` (`id`, `username`, `password`) VALUES
 	(1, 'pierre', 'pi'),

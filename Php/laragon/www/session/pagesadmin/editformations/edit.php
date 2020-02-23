@@ -6,7 +6,7 @@ $qry = mysqli_query( $connect, $seledittwo );
 $selassoc = mysqli_fetch_assoc( $qry );
 $id = $selassoc[ 'id' ];
 $diplome = $selassoc[ 'diplome' ];
-$otpion = $selassoc[ 'option' ];
+$option = $selassoc[ 'option' ];
 $annee = $selassoc[ 'annee' ];
 $etablissement = $selassoc[ 'etablissement' ];
 $lieu = $selassoc[ 'lieu' ];
@@ -32,25 +32,27 @@ if ( isset( $_POST[ 'updateedit' ] ) ) {
 </head>
 <body>
 <form method="POST" action="">
-  <input type="text" name="upid" value="<?php echo $id; ?>">
-  <br>
-  <br>
+  <p>Diplôme</p>
   <input type="text" name="updiplome" value="<?php echo $diplome; ?>">
   <br>
   <br>
-  <input type="text" name="upoption" value="<?php echo $upoption; ?>">
-	<br>
+  <p>Option</p>
+  <input type="text" name="upoption" value="<?php echo $option; ?>">
   <br>
+  <br>
+  <p>Année</p>
   <input type="text" name="upannee" value="<?php echo $annee; ?>">
-	<br>
   <br>
+  <br>
+  <p>Etablissement</p>
   <input type="text" name="upetablissement" value="<?php echo $etablissement; ?>">
-	<br>
   <br>
+  <br>
+  <p>Lieu</p>
   <input type="text" name="lieu" value="<?php echo $lieu; ?>">
-	<br>
   <br>
-<input type="submit" name="updateedit" value="Update">
+  <br>
+  <input type="submit" name="updateedit" value="Modifier">
 </form>
 </body>
 </html>

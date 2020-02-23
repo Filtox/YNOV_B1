@@ -21,29 +21,34 @@ if ( isset( $_POST[ 'submitinserdetails' ] ) ) {
 <!DOCTYPE html>
 <html>
 <head>
-<title></title>
-    <link rel="stylesheet" href="../../assets/css/style.css">
+<title>Ajouter données</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
 </head>
 <body>
 <form action="" method="POST">
+  <p>Diplome</p>
   <input type="text" name="diplome" placeholder="Diplome">
   <br >
   <br >
+  <p>Option</p>
   <input type="text" name="option" placeholder="Option">
-	<br >
   <br >
+  <br >
+  <p>Année</p>
   <input type="text" name="annee" placeholder="Annee">
-	<br >
   <br >
+  <br >
+  <p>Etablissement</p>
   <input type="text" name="etablissement" placeholder="Etablissement">
-	<br >
   <br >
+  <br >
+  <p>Lieu</p>
   <input type="text" name="lieu" placeholder="Lieu">
   <br >
   <br >
   <input type="submit" name="submitinserdetails" value="Insérer">
 </form>
-    <br>
-    <a class="myButton" href="../../indexAdmin.php?page=formationsadmin">Revenir à la page</a>
+<br>
+<a class="myButton" href="../../indexAdmin.php?page=formationsadmin">Revenir à la page</a>
 </body>
 </html>

@@ -42,5 +42,6 @@ td {
     ?>
   </tr>
 </table>
+    <br><br><img style="width: 30%; height: auto;" alt="profil" src="../images/actual/exp.jpg"><br><br>
 </body>
 </html>
