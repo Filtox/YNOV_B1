@@ -6,10 +6,15 @@
 <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
-<?= recupereBaseDonneesExperiences() ?>
+    <?php
+include( "editexp/display.php" );
+?>
+<!-- <?= recupereBaseDonneesExperiences()?>  -->
 <!--
 <?php include "includes/data.php" ?>
 <?= getMultipleArray($exp_pro, "exp") ?>
 -->
+    <br>
+<a class="myButton" href="../pagesadmin/editexp/insertdeleteedit.php">Ajouter</a>
 </body>
 </html>

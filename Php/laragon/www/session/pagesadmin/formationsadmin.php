@@ -6,7 +6,12 @@
 <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
-<?= recupereBaseDonneesFormation() ?>
+<?php
+include( "editformations/display.php" );
+?>
+    <br>
+<a class="myButton" href="../pagesadmin/editformations/insertdeleteedit.php">Ajouter</a>
+<!-- <?= recupereBaseDonneesFormation() ?> -->
 <!--
 <?php include "includes/data.php" ?>
 <?= getMultipleArray($formations, "formation") ?>

@@ -50,7 +50,7 @@ function getAndIncrementCompteur() {
 }
 
 /*
-function recupereBaseDonnees() {
+function recupereBaseDonneesPres() {
   try {
     $bdd = new PDO( 'mysql:host=localhost;dbname=sitecvphp;charset=utf8', 'root', '' );
   } catch ( Exception $e ) {
@@ -58,7 +58,7 @@ function recupereBaseDonnees() {
   }
   $reponse = $bdd->query( 'SELECT * FROM presentation' );
   while ( $donnees = $reponse->fetch() ) {
-    echo $donnees[ 'prenom' ] . '  ' . $donnees[ 'nom' ] . ' , ' . $donnees[ 'age' ] . ',  ' . $donnees[ 'adresse' ] . ',  ' . $donnees[ 'ville' ] . ',  ' . $donnees[ 'mail' ] . ' , ' . $donnees[ 'telephone' ] . ' , ' . $donnees[ 'permis' ] . '<br />';
+    echo $donnees[ 'firstname' ] . '  ' . $donnees[ 'lastname' ] . ' , ' . $donnees[ 'age' ] . ',  ' . $donnees[ 'adresse' ] . ',  ' . $donnees[ 'ville' ] . ',  ' . $donnees[ 'mail' ] . ' , ' . $donnees[ 'phone' ] . ' , ' . $donnees[ 'permis' ] . '<br />';
   }
   $reponse->closeCursor();
 }
@@ -72,7 +72,7 @@ function recupereBaseDonneesPresentation() {
     die( 'Erreur : ' . $e->getMessage() );
   }
 
-  $reponse = $bdd->query( 'SELECT prenom, nom, age, adresse, ville, mail, telephone, permis FROM presentation' );
+  $reponse = $bdd->query( 'SELECT firstname, lastname, age, adresse, ville, mail, phone, permis FROM presentation' );
 
   echo '<table border="1">';
 
@@ -98,7 +98,7 @@ function recupereBaseDonneesPresentation() {
   echo '</table>';
   $reponse->closeCursor();
 }
-
+    
 // EXPERIENCES
 function recupereBaseDonneesExperiences() {
   try {

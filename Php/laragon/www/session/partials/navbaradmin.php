@@ -14,7 +14,7 @@
         }
         ?>
         <li class="nav-item <?= $active ?>">
-          <a class="nav-link" href="../indexAdmin.php?page=<?= $navPage ?>"> <?= getTitle($navPage) ?> <span class="sr-only">(current)</span></a>
+          <a class="nav-link" style="font-weight: 900" href="../indexAdmin.php?page=<?= $navPage ?>"> <?= getTitle($navPage) ?> <span class="sr-only">(current)</span></a>
         </li>
       <?php endforeach ?>
     </ul>
