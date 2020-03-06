@@ -21,33 +21,56 @@ if ( isset( $_POST[ 'updateedit' ] ) ) {
     header( "location: display.php" );
   }
 }
-//$seledit = "UPDATE `presentation` SET `id`=[value-1],`firstname`=[value-2],`lastname`=[value-3],`email`=[value-4] WHERE `id` = '$getid'";
+
+$query = "SELECT * FROM `equipe`";
+$result1 = mysqli_query( $connect, $query );
+
+$query2 = "SELECT * FROM `equipe`";
+$result2 = mysqli_query( $connect, $query2 );
 ?>
 <!DOCTYPE html>
 <html>
 <head>
 <title>Edition Matchs</title>
 <link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
-<form method="POST" action="../../indexAdmin.php?page=matchsadmin">
-  <p>Equipe 1 (Int)</p>
-  <input type="text" name="upeq1" value="<?php echo $eq1; ?>">
+<div class="container text-center"> <br>
   <br>
   <br>
-  <p>Equipe 2 (Int)</p>
-  <input type="text" name="upeq2" value="<?php echo $eq2; ?>">
-  <br>
-  <br>
-  <p>Date du match (YYYY-MM-JJ)</p>
-  <input type="text" name="updateMatch" value="<?php echo $dateMatch; ?>">
-  <br>
-  <br>
-  <p>Résultat (1 ou 2 ou N)</p>
-  <input type="text" name="upresultat" value="<?php echo $resultat; ?>">
-  <br>
-  <br>
-  <input type="submit" name="updateedit" value="Modifier">
-</form>
+  <form method="POST" action="../../indexAdmin.php?page=matchsadmin">
+    <h5>Equipe 1</h5>
+    <select name="eq1" size="1">
+      <?php while($row1 = mysqli_fetch_array($result1)):;?>
+      <option value="<?php echo $row1[0];?>"><?php echo $row1[1];?></option>
+      <?php endwhile;?>
+    </select>
+    <br>
+    <br>
+    <h5>Equipe 2</h5>
+    <select name="eq2" size="1">
+      <?php while($row1 = mysqli_fetch_array($result2)):;?>
+      <option value="<?php echo $row1[0];?>"><?php echo $row1[1];?></option>
+      <?php endwhile;?>
+    </select>
+    <br>
+    <br>
+    <h5>Date du match</h5>
+    <input type="date" name="updateMatch" value="<?php echo $dateMatch; ?>">
+    <br>
+    <br>
+    <h5>Résultat</h5>
+    <SELECT name="resultat" size="4">
+      <OPTION value="1">Equipe 1</option>
+      <OPTION value="2">Equipe 2</option>
+      <OPTION value="N">Nul</option>
+      <OPTION value="Résultat à venir">Résultat à venir</option>
+    </select>
+    <br>
+    <br>
+    <input type="submit" name="updateedit" value="Modifier">
+  </form>
+</div>
 </body>
 </html>
