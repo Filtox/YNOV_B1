@@ -21,9 +21,9 @@ CREATE TABLE IF NOT EXISTS `equipe` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nom` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
 
--- Listage des données de la table loto.equipe : ~14 rows (environ)
+-- Listage des données de la table loto.equipe : ~15 rows (environ)
 /*!40000 ALTER TABLE `equipe` DISABLE KEYS */;
 INSERT INTO `equipe` (`id`, `nom`) VALUES
 	(1, 'Toulouse'),
@@ -39,7 +39,8 @@ INSERT INTO `equipe` (`id`, `nom`) VALUES
 	(12, 'Bayonne'),
 	(13, 'Brive'),
 	(14, 'Pau'),
-	(15, 'Stade FranÃ§ais');
+	(15, 'Stade FranÃ§ais'),
+	(16, 'Rodez');
 /*!40000 ALTER TABLE `equipe` ENABLE KEYS */;
 
 -- Listage de la structure de la table loto. matchs
@@ -52,9 +53,9 @@ CREATE TABLE IF NOT EXISTS `matchs` (
   PRIMARY KEY (`id`),
   KEY `eq1` (`eq1`),
   KEY `eq2` (`eq2`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
 
--- Listage des données de la table loto.matchs : ~7 rows (environ)
+-- Listage des données de la table loto.matchs : ~9 rows (environ)
 /*!40000 ALTER TABLE `matchs` DISABLE KEYS */;
 INSERT INTO `matchs` (`id`, `eq1`, `eq2`, `dateMatch`, `resultat`) VALUES
 	(2, 1, 2, '2019-05-25', '1'),
@@ -64,7 +65,8 @@ INSERT INTO `matchs` (`id`, `eq1`, `eq2`, `dateMatch`, `resultat`) VALUES
 	(11, 1, 2, '2020-03-01', 'N'),
 	(12, 1, 6, '2020-03-03', 'N'),
 	(16, 1, 7, '2024-10-17', 'N'),
-	(17, 1, 2, '2020-03-29', 'RÃ©sultat Ã  venir');
+	(17, 1, 2, '2020-03-29', 'RÃ©sultat Ã  venir'),
+	(18, 16, 4, '2020-03-06', '1');
 /*!40000 ALTER TABLE `matchs` ENABLE KEYS */;
 
 -- Listage de la structure de la table loto. users
@@ -75,7 +77,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
--- Listage des données de la table loto.users : ~0 rows (environ)
+-- Listage des données de la table loto.users : ~1 rows (environ)
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 INSERT INTO `users` (`id`, `username`, `password`) VALUES
 	(1, 'p', 'p');
@@ -84,4 +86,3 @@ INSERT INTO `users` (`id`, `username`, `password`) VALUES
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-loto
