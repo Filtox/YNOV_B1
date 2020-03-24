@@ -7,8 +7,8 @@ using namespace std;
 
 void creerFichier()
 {
-    string fname = "names.txt";
-    ofstream fileStream(fname);
+    ofstream fileStream;
+    fileStream.open("names.txt");
     fileStream << "Janice" << endl;
     fileStream << "Pierre" << endl;
     fileStream << "Nicolas" << endl;
@@ -17,28 +17,19 @@ void creerFichier()
 
 bool chargeFichier(vector<string> &listeNom)
 {
-    string fname = "names.txt";
-    ifstream fileStream(fname);
+    ifstream fileStream("names.txt");
     string LINE;
-
-    if (!fileStream.is_open()) {
+    if (fileStream.is_open()) {
+        while (getline(fileStream, LINE))listeNom.push_back(LINE);
+    } else {
         return false;
-    }
-
-    while (getline(fileStream, LINE))
-    {
-        listeNom.push_back(LINE);
     }
     return true;
 }
 
 bool chercheNom(string nom, const vector<string> &listeNoms)
 {
-    for(int i = 0; i < listeNoms.size(); i++) {
-        if(listeNoms.at(i) == nom){ // [i] no verification
-            return true;
-        }
-    }
+    for(int i = 0; i < listeNoms.size(); i++) if(listeNoms[i] == nom) return true;
     return false;
 }
 
@@ -47,7 +38,7 @@ int main()
     creerFichier();
     vector<string> names;
     chargeFichier(names);
-    cout << chercheNom("Pierre", names) << endl;
-    cout << chercheNom("Dmitrii", names) << endl;
+    cout<< chercheNom("Pierre", names) << endl;
+    cout<< chercheNom("Dmitrii", names) << endl;
     return 0;
 }
