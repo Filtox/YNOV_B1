@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1586168680 source:c:\users\hatch\documents\github\ynov_b1\c++\tp\ecole\src\eleves.cpp
+	"eleves.h"
+
+1586176401 c:\users\hatch\documents\github\ynov_b1\c++\tp\ecole\include\eleves.h
+	<iostream>
+	<vector>
+
+1586169582 source:c:\users\hatch\documents\github\ynov_b1\c++\tp\ecole\src\groupe.cpp
+	"groupe.h"
+
+1586176364 c:\users\hatch\documents\github\ynov_b1\c++\tp\ecole\include\groupe.h
+	"eleves.h"
+
+1586176130 source:c:\users\hatch\documents\github\ynov_b1\c++\tp\ecole\main.cpp
+	"eleves.h"
+	"groupe.h"
+
